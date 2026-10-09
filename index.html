@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder - Discover Movies</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="/js/app.js" defer></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-film"></i>
+                <span>Movie Finder</span>
+
+            </a>
+            <nav class="nave-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="genres.html" class="nav-link ">Genres</a>
+            </nav>
+
+            <form class="search-form" id="search-form">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search movies..." autocomplete="off">
+                </div>
+                <div class="suggestions-dropdown" id="suggestions-dropdown"></div>
+            </form>
+        </div>
+
+    </header>
+    <main>
+        <section class="hero-section" id="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">Featured Movie</span>
+                <h1 class="hero-title" id="hero-title">Loading Feature Movie...</h1>
+                <div class="hero-meta">
+                    <span class="hero-rating" id="hero-rating">
+                        <i class="fa-solid fa-star"></i>
+                        --
+                    </span>
+                    <span class="hear-year" id="hero-year">----</span>
+
+                </div>
+                <p class="hero-description" id="hero-description"> Please wait while we fetch the latest featured movie
+                    details...
+
+                </p>
+                <a href="#" class="btn-primery" id="hero-btn">
+                    <i class="fa-solid fa-circle-info"></i> View Details
+                </a>
+            </div>
+
+        </section>
+        <section class="movies-section container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Movies</h2>
+            </div>
+            <div class="movie-grid" id="popular-movies-grid">
+
+            </div>
+        </section>
+        <section class="movies-section container">
+            <div class="section-header">
+                <h2 class="section-title">Top Rated Movies</h2>
+            </div>
+            <div class="movie-grid" id="top-rated-movies-grid">
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Movie Finder. Powered by OMDb API.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="genres.html">Genres</a>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>
