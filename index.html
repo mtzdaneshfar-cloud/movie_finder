@@ -18,10 +18,6 @@
                 <span>Movie Finder</span>
 
             </a>
-            <nav class="nave-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="genres.html" class="nav-link ">Genres</a>
-            </nav>
 
             <form class="search-form" id="search-form">
                 <div class="search-input-wrapper">
@@ -30,6 +26,10 @@
                 </div>
                 <div class="suggestions-dropdown" id="suggestions-dropdown"></div>
             </form>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="genres.html" class="nav-link ">Genres</a>
+            </nav>
         </div>
 
     </header>
@@ -44,14 +44,14 @@
                         <i class="fa-solid fa-star"></i>
                         --
                     </span>
-                    <span class="hear-year" id="hero-year">----</span>
+                    <span class="hero-year" id="hero-year">----</span>
 
                 </div>
                 <p class="hero-description" id="hero-description"> Please wait while we fetch the latest featured movie
                     details...
 
                 </p>
-                <a href="#" class="btn-primery" id="hero-btn">
+                <a href="#" class="btn-primary" id="hero-btn">
                     <i class="fa-solid fa-circle-info"></i> View Details
                 </a>
             </div>
@@ -70,7 +70,22 @@
                 <h2 class="section-title">Top Rated Movies</h2>
             </div>
             <div class="movie-grid" id="top-rated-movies-grid">
-
+                <a href="details.html?id=tt1234567" class="movie-card">
+                    <div class="movie-poster-wrapper">
+                        <img src="..." alt="Movie Title" class="movie-poster">
+                        <span class="movie-rating-badge">
+                            <i class="fa-solid fa-star"></i> 8.2
+                        </span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Wolf of Wall Street</h3>
+                        <p class="movie-meta-text">Crime / Comedy</p>
+                        <div class="movie-card-footer">
+                            <span class="movie-card-rating"><i class="fa-solid fa-star"></i> 8.2</span>
+                            <span class="btn-view-info">View Info</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
@@ -85,8 +100,6 @@
 
 
     </footer>
-
-
 </body>
 
 </html>
