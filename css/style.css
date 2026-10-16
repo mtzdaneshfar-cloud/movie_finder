@@ -507,3 +507,182 @@ a {
     color: var(--accent-color);
 }
 
+/*
+   Movie Details Page Styles
+   */
+.back-btn-container {
+    margin-bottom: 2rem;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.btn-back:hover {
+    background-color: var(--border-color);
+    color: var(--accent-color);
+}
+
+.movie-details-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+    background-color: var(--bg-secondary);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    align-items: start;
+}
+
+.movie-details-poster img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.movie-meta-info {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.movie-meta-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.movie-genres-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.genre-tag {
+    background-color: var(--bg-card);
+    color: var(--accent-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border-color);
+}
+
+.movie-rating-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--bg-card);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.movie-rating-box .rating-max {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+.movie-plot-section {
+    margin-bottom: 1.5rem;
+}
+
+.movie-plot-section h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.movie-plot-section p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.movie-extra-info p {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.movie-extra-info strong {
+    color: var(--text-primary);
+}
+
+
+/*
+   Genres Page Styles
+  */
+.genres-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.genre-btn {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.genre-btn:hover {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.genre-btn.active {
+    background-color: var(--accent-color);
+    color: #000;
+    border-color: var(--accent-color);
+    font-weight: 600;
+}
+
+
+/* 
+   Responsive Adjustments for Details
+   */
+@media (max-width: 768px) {
+    .movie-details-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .movie-details-poster img {
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .movie-details-info h1 {
+        font-size: 2rem;
+    }
+}
