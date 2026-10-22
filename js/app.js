@@ -125,3 +125,14 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchMoviesList("Marvel", popularGrid);
   fetchMoviesList("Batman", topRatedGrid);
 });
+
+let searchTimeout = null;
+
+function debounce(func, delay) {
+    return function(...args) {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
+    };
+}

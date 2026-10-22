@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genres - Movie Finder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="js/genres.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar (سراسری) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-film"></i>
+                <span>MovieFinder</span>
+            </a>
+            <div class="search-form" id="search-form">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search movies..." autocomplete="off">
+                    <div class="suggestions-dropdown" id="suggestions-dropdown"></div>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="genres.html" class="nav-link active">Genres</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content: Genres Page -->
+    <main class="main-content">
+        <div class="container">
+            <div class="section-header">
+                <div class="accent-bar"></div>
+                <h2>Explore by Genre</h2>
+            </div>
+
+            <!-- دکمه‌های انتخاب ژانر -->
+            <div class="genres-filter-buttons" id="genres-filter-container">
+                <button class="genre-btn active" data-genre="Action">Action</button>
+                <button class="genre-btn" data-genre="Comedy">Comedy</button>
+                <button class="genre-btn" data-genre="Drama">Drama</button>
+                <button class="genre-btn" data-genre="Horror">Horror</button>
+                <button class="genre-btn" data-genre="Sci-Fi">Sci-Fi</button>
+                <button class="genre-btn" data-genre="Animation">Animation</button>
+            </div>
+            <div id="genres-loading" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading movies...</p>
+            </div>
+            <div id="genres-error" class="error-message" style="display: none;">
+                <p>Could not load movies for this genre. Please try again.</p>
+            </div>
+            <!-- ظرف نمایش فیلم‌های مربوط به ژانر انتخاب‌شده -->
+            <div class="movie-grid" id="genre-movies-grid">
+                <!-- کارت‌های فیلم به‌صورت پویا اینجا لود می‌شوند -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (سراسری) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Movie Finder. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="genres.html">Genres</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

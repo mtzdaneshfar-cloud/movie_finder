@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - Movie Finder</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="/js/details.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar (سراسری) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-film"></i>
+                <span>MovieFinder</span>
+            </a>
+            <div class="search-form" id="search-form">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search movies..." autocomplete="off">
+                    <div class="suggestions-dropdown" id="suggestions-dropdown"></div>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="genres.html" class="nav-link">Genres</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content: Movie Details -->
+    <main class="main-content">
+        <div class="container">
+            <!-- دکمه بازگشت -->
+            <div class="back-btn-container">
+                <a href="index.html" class="btn-back">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+
+            <!-- ظرف لودینگ اولیه -->
+            <div id="details-loading" class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+
+            <!-- ظرف نمایش اطلاعات فیلم (در ابتدا مخفی یا خالی) -->
+            <div id="movie-details-container" class="movie-details-grid" style="display: none;">
+                <!-- ستون پوستر -->
+                <div class="movie-details-poster">
+                    <img id="detail-poster" src="" alt="Movie Poster">
+                </div>
+
+                <!-- ستون اطلاعات و جزئیات -->
+                <div class="movie-details-info">
+                    <h1 id="detail-title">Movie Title</h1>
+                    <div class="movie-meta-info">
+                        <span id="detail-year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                        <span id="detail-rated"><i class="fa-solid fa-shield"></i> PG-13</span>
+                        <span id="detail-runtime"><i class="fa-solid fa-clock"></i> 120 min</span>
+                    </div>
+                    
+                    <div class="movie-genres-tags" id="detail-genres">
+                        <!-- تگ‌های ژانر به صورت پویا اینجا قرار می‌گیرند -->
+                    </div>
+
+                    <div class="movie-rating-box">
+                        <i class="fa-solid fa-star"></i>
+                        <span id="detail-rating">8.5</span>
+                        <span class="rating-max">/10</span>
+                    </div>
+
+                    <div class="movie-plot-section">
+                        <h3>Storyline</h3>
+                        <p id="detail-plot">Detailed plot description goes here...</p>
+                    </div>
+
+                    <div class="movie-extra-info">
+                        <p><strong>Director:</strong> <span id="detail-director">N/A</span></p>
+                        <p><strong>Actors:</strong> <span id="detail-actors">N/A</span></p>
+                        <p><strong>Box Office:</strong> <span id="detail-boxoffice">N/A</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ظرف خطا در صورت پیدا نشدن فیلم -->
+            <div id="details-error" class="error-message" style="display: none;">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Could not load movie details. Please try again later.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (سراسری) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Movie Finder. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="genres.html">Genres</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
